@@ -2,7 +2,6 @@ import requests
 import json
 import sys
 
-
 char_info_call = requests.get('https://api.xivdb.com/character/' + str(sys.argv[1]))
 char_info = char_info_call.json()
 
@@ -21,7 +20,9 @@ gearset_dic = char_gearsets[0]
 print(str('Item Level Avg: ') + str(gearset_dic['item_level_avg']))
 gear_gear = (gearset_dic['gear'])
 
-mainhand = (gear_gear['slot_mainhand']['data'])
-#print(mainhand.keys())
-print(str('Main Hand: ') + mainhand['name'] + str(', ') + str(mainhand['level_item']))
-#print(mainhand['level_item'])
+#turn this into a for loop to search for gear_gear['slot_*']
+for key in gear_gear:
+    if 'slot_' in key:
+        print(key + str(': ') + gear_gear[key]['data']['name'] + str(', ') + str(gear_gear[key]['data']['level_item']))
+    else:
+        break
