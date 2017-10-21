@@ -10,13 +10,9 @@ print(str('Server: ') + char_info['server'])
 print(str('Last Active: ') + char_info['last_active'])
 
 char_data = char_info['data']
-
 char_gearsets_request = requests.get('https://api.xivdb.com/character/' + str(sys.argv[1]) + str('?data=gearsets'))
-
 char_gearsets = char_gearsets_request.json()
 gearset_dic = char_gearsets[0]
-
-print(len(char_gearsets))
 num_gearsets = len(char_gearsets)
 gear_gear = (gearset_dic['gear'])
 
