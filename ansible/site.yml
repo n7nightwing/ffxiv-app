@@ -1,29 +1,14 @@
 ---
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  remote_user: root
-  tasks:
-  - name: install latest python
-    apt:
-      name: python3.6
-      update_cache: yes
-  - name: install pip
-    apt:
-      name: python3-pip
-      update_cache: yes
-  - name: install build-essential
-    apt:
-      name: build-essential
-      update_cache: yes
-  - name: install python-dev
-    apt:
-      name: python-dev
-      update_cache: yes
-  - name: install virtualenv
-    pip:
-      name: virtualenv
-  - name: install flask
-    pip:
-      name: flask
+  - name: Base web server installation/dependencies
+    hosts: all
+    remote_user: root
+
+    roles:
+      - web
+
+  - name: UWSGI deployment and configuration
+    hosts: all
+    remote_user: ubuntu
+
+    roles:
+      - web
