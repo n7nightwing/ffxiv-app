@@ -11,6 +11,7 @@ char_id = char_search['characters']['results'][0]['id']
 char_info_call = requests.get('https://api.xivdb.com/character/' + str(char_id))
 char_info = char_info_call.json()
 
+#Print basic char info
 print(str('Name: ') + char_info['name'])
 print(str('Server: ') + char_info['server'])
 print(str('Last Active: ') + char_info['last_active'])
@@ -23,7 +24,7 @@ gearset_dic = char_gearsets[0]
 num_gearsets = len(char_gearsets)
 gear_gear = (gearset_dic['gear'])
 
-# Parses through gearsets to find raid ready sets 
+#Parses through gearsets to find raid ready sets 
 for i in range(0,num_gearsets - 1):
     gearset_dic = char_gearsets[i]
     gear_gear = (gearset_dic['gear'])
