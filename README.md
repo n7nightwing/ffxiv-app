@@ -1,12 +1,12 @@
 # ffxiv-app
-FFXIV FC Raid Site
-Python script that returns Character Classes, items, and gearsets that are "raid ready". Run character.py with the following syntax:
+###FFXIV FC Raid Site
+Python script that returns Character Classes, items, and gearsets that are *raid ready*. Run character.py with the following syntax:
 
-'python character.py {Lodestone_character_id}'
+`python character.py {Lodestone_character_id}``
 
 It returns Name, Server, Time last active, and gearsets that meet the item level requirement.
 Example output:
-'''
+```
 Name: Artemis Quohn
 Server: Leviathan
 Last Active: 2017-06-09 05:41:52
@@ -40,6 +40,6 @@ slot_bracelets: Lakshmi's Bracelet of Fending, 320
 slot_ring1: Lakshmi's Ring of Fending, 320
 slot_ring2: Ala Mhigan Ring of Fending, 310
 slot_necklace: Genta Necklace of Fending, 320
-'''
+```
 
 Lots more coming to this. Stay tuned!
