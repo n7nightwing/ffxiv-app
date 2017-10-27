@@ -1,10 +1,12 @@
 # ffxiv-app
-###FFXIV FC Raid Site
+##FFXIV FC Raid Site
+
 Python script that returns Character Classes, items, and gearsets that are *raid ready*. Run character.py with the following syntax:
 
 `python character.py {firstname lastname}`
 
 It returns Name, Server, Time last active, and gearsets that meet the item level requirement.
+
 Example output:
 ```
 Name: Artemis Quohn
