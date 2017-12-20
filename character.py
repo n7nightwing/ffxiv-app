@@ -27,7 +27,7 @@ gear_gear = (gearset_dic['gear'])
 for i in range(0,num_gearsets - 1):
     gearset_dic = char_gearsets[i]
     gear_gear = (gearset_dic['gear'])
-    if gearset_dic['item_level_avg'] >= 300:
+    if gearset_dic['item_level_avg'] >= 320:
         print(gear_gear['slot_mainhand']['data']['classjob_category'])
         print(str('Item Level Avg: ') + str(gearset_dic['item_level_avg']))
         for key in gear_gear:
